@@ -34,7 +34,7 @@ server.tool(
   "printkit_get_product",
   "Get detailed product info including all variants with SKUs, sizes, prices, and image constraints.",
   {
-    handle: z.string().describe('Product handle, e.g. "gallery-frames", "large-format-prints", "wood-prints", "metal-prints", "acrylic-photo-block", "photo-magazine"'),
+    handle: z.string().describe('Product handle, e.g. "metal-prints", "gallery-frames", "wood-prints", "acrylic-photo-block", "large-format-prints", "photo-magazine", "photo-magnets", "greeting-cards", "postcards", "photo-stickers"'),
   },
   async ({ handle }) => {
     const res = await fetch(`${PRINTKIT_BASE}/products/${handle}.json`);
